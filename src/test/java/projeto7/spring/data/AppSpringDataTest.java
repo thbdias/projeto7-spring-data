@@ -93,5 +93,15 @@ public class AppSpringDataTest {
 		}
 	}
 	
+	@Test
+	public void testeConsultaPersonalizadaNomeParam() {
+		UsuarioSpringData usuarioSpringData = interfaceSpringDataUser.buscaPorNomeParam("maria");
 	
+		System.out.println(usuarioSpringData.getEmail());
+		System.out.println(usuarioSpringData.getIdade());
+		System.out.println(usuarioSpringData.getLogin());
+		System.out.println(usuarioSpringData.getNome());
+		System.out.println(usuarioSpringData.getSenha());
+		System.out.println(usuarioSpringData.getId());
+	}
 }
