@@ -13,10 +13,12 @@ import projeto7.spring.data.model.UsuarioSpringData;
 
 @Repository
 public interface InterfaceSpringDataUser extends CrudRepository<UsuarioSpringData, Long> {
-		
+	
+	@Transactional(readOnly = true)
 	@Query(value = "select p from UsuarioSpringData p where p.nome like %?1%")
 	public List<UsuarioSpringData> buscarPorNome(String nome);
 	
+	@Transactional(readOnly = true)
 	@Query(value = "select p from UsuarioSpringData p where p.nome = :paramNome")
 	public UsuarioSpringData buscaPorNomeParam(@Param("paramNome") String nomeParam);
 	
