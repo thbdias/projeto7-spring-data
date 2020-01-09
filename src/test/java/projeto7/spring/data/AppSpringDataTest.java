@@ -104,4 +104,9 @@ public class AppSpringDataTest {
 		System.out.println(usuarioSpringData.getSenha());
 		System.out.println(usuarioSpringData.getId());
 	}
+	
+	@Test
+	public void testeDeletePorNome() {
+		interfaceSpringDataUser.deletePorNome("maria2");
+	}
 }
